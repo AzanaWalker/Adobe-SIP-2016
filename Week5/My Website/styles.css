@@ -1,0 +1,22 @@
+html {
+background: url(background.jpg) no-repeat center center fixed;
+-webkit-background-size: cover;
+-moz-background-size:cover;
+-o-background-size:cover;
+background-size:cover;
+}
+
+#nav {
+width:750px;
+margin:0 auto;
+list-style:none;
+}
+#nav li{
+    float:left;
+}
+#nav a {
+    display:block;
+    text-align:center;
+    width:150px;
+    text-decoration:none;
+}
