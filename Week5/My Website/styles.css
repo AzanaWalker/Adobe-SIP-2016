@@ -1,22 +1,112 @@
 html {
-background: url(background.jpg) no-repeat center center fixed;
+background: url(images/mount.jpg) no-repeat center center fixed;
 -webkit-background-size: cover;
 -moz-background-size:cover;
 -o-background-size:cover;
 background-size:cover;
 }
 
-#nav {
+p{
+    float: right;
+    padding-right: 100px;
+    font-size: 20px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.menu {
+    width:50%;
+    margin:20px auto;
+    padding:20px;
+    border-radius: 140px;
+    list-style:none;
+    background-color:#ffffff;
+    text-align:center;
+    font-family: sans-serif;
+}
+.menu {
 width:750px;
 margin:0 auto;
 list-style:none;
 }
-#nav li{
-    float:left;
+.menu li{
+    display:inline-block;
+    width:30%;
+    margin:0;
+    padding:0;
 }
-#nav a {
-    display:block;
-    text-align:center;
-    width:150px;
-    text-decoration:none;
+.menu li a{
+background-color: #205081
+display:inline-block;
+border-right:1px solid #fff
+padding-right:30px;
+padding-left: 6px;
+border-radius: 20px;
+
+/*text-decoration: none;
+padding:5px 0;
+width:100px;
+text-align:center;*/
+}
+        .menu a {
+            text-align:center;
+            display:inline-block;
+            width:150px;
+            padding:10px 0 13px 0;
+            margin:0;
+            border-left: 5px solid:#000000;
+            border-right: 5px solid:#000000;
+            text-decoration:none;
+        }
+        .menu a:hover { 
+            background-image: url("images/mount.jpg");
+            border:none;
+
+        }
+        /*.menu li:first-child a {
+            border:none;
+        }
+        .menu li:last-child a {
+            border:none;
+        }*/
+        .menu a.clicked{
+            background:#ffffff;
+        }
+/*.menu a:hover{
+    background:blue;
+    border:none;
+}*/
+.pic1{
+    width:1000px;
+/*img {float:right;}
+    .about_me {margin-right:400px}*/
+}
+/*.links{
+    a.visted{
+
+        color:#205081;
+    }
+}*/
+
+.text{
+    padding-left: 420px;
+}
+
+.title{
+    style="font-size: 50px;
+}
+
+.tech{
+    align="left";
+
+
+}
+
+.image_off, #home:hover .image_on{
+   display:none
+}
+.image_on, #home:hover .image_off{
+   display:block
 }
