@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #map {
+        width: 100%;
+        height: 580px;
+        background-color: grey;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>My Google Maps Demo</h3>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var tech ="images/mount.jpg";
+        var mapDiv = document.getElementById('map');
+        var map = new google.maps.Map(mapDiv,{
+            center: { lat:37.832396, lng: -122.254447},
+              zoom:19 
+        });
+            map.setOptions({  
+            mapTypeId: google.maps.MapTypeId.HYBRID
+           });
+          var marker = new google.maps.Marker({
+            position:{lat:37.832396, lng: -122.254447} ,
+            map: map,
+            // icon: tech
+          });
+          // marker(position:);
+          var contentString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Oakland Technical High School</h1>'+
+            '<div id="bodyContent">'+
+            '<p><b>Oakland Technical High School</b>, also referred to as <b>Oakland Tech</b> or <b>Tech</b> ,' +
+            ' is a public high school in Oakland, California,'+
+            ' and is operated under the jurisdiction of the Oakland Unified School District.'+
+            ' It is one of six comprehensive public high school campuses in Oakland. Oakland Techs '+'attendance jurisdiction includes several neighborhoods, including Oakland Chinatown, Rockridge, North Oakland, and Temescal.'+
+            '</div>'+
+            '</div>';
+          var infowindow = new google.maps.InfoWindow({
+          content: contentString
+        });
+          marker.addListener('click', function() {
+          infowindow.open(map, marker);
+        });
+        }
+
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHypWl2F1RFt-hNUbYFAP9BHQbQgJtrPw&callback=initMap">
+    </script>
+  </body>
+</html>

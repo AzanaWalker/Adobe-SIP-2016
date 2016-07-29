@@ -52,3 +52,28 @@
 // {
 //     $("#menuImg").attr('src', 'images/IMG_3015.jpg');
 // }
+
+
+// $("img").on({
+//  "mouseover" : function() {
+//     this.src = 'images/IMG_3015.jpg';
+//   },
+//   "mouseout" : function() {
+//     this.src='images/IMG_9262';
+//   }
+// });
+
+ // var sourceSwap = function () {
+ //        var $this = $(this);
+ //        var newSource = $this.data('alt-src');
+ //        $this.data('alt-src', $this.attr('src'));
+ //        $this.attr('src', newSource);
+ //    }
+
+ //    $(function () {
+ //        $('img.gwc_pics').hover(sourceSwap, sourceSwap);
+ //    });
+
+$('a').click(function(){
+    $(this).addClass("visited");
+});
