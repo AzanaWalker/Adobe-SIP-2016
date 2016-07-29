@@ -14,9 +14,10 @@
     <div id="map"></div>
     <script>
       function initMap() {
-        var tech ="images/mount.jpg";
+        var tech ='https://oaklandtech.com/staff/wp-content/blogs.dir/1/files//2008/08/bulldog.jpg';
         var mapDiv = document.getElementById('map');
-        var map = new google.maps.Map(mapDiv,{
+        var map = new google.maps.Map(mapDiv,
+        {
             center: { lat:37.832396, lng: -122.254447},
               zoom:19 
         });
@@ -25,10 +26,10 @@
            });
           var marker = new google.maps.Marker({
             position:{lat:37.832396, lng: -122.254447} ,
+            icon: tech,
             map: map,
-            // icon: tech
+        
           });
-          // marker(position:);
           var contentString = '<div id="content">'+
             '<div id="siteNotice">'+
             '</div>'+
